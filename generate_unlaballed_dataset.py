@@ -11,6 +11,6 @@ labeled_data, unlabeled_data = train_test_split(data, test_size=0.8, random_stat
 # Drop labels from the unlabeled subset
 unlabeled_data = unlabeled_data.drop('y', axis=1)
 
-df = pd.concat([labeled_data,unlabeled_data],ignore_index=True)
 
-df.to_csv("./bankDataset/label_unlabel.csv",index=False)
+labeled_data.to_csv("./bankDataset/labeled_data.csv",index=False)
+unlabeled_data.to_csv("./bankDataset/unlabeled_data.csv",index=False)
